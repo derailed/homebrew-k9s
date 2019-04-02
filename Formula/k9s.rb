@@ -4,7 +4,7 @@ class K9s < Formula
   homepage "https://k9ss.io"
   url "https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Darwin_x86_64.tar.gz"
   version "0.4.4"
-  sha256 "9b203de941b4df17c343f7b5d2ffad20525a5179b79ef0c5b52dd55cf07c461f"
+  sha256 "0f111f07c8df7c0d978c101a3549fa747b98e633489d88a25f1f82276ab04d37"
 
   def install
     bin.install "k9s"
