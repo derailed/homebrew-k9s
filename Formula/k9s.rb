@@ -2,9 +2,9 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9ss.io"
-  url "https://github.com/derailed/k9s/releases/download/0.4.7/k9s_0.4.7_Darwin_x86_64.tar.gz"
-  version "0.4.7"
-  sha256 "fa6f36d7f8e3917e9cf300567912d57206c7eee650d7a5f9741f23e5825c52ec"
+  url "https://github.com/derailed/k9s/releases/download/0.4.8/k9s_0.4.8_Darwin_x86_64.tar.gz"
+  version "0.4.8"
+  sha256 "6eab7cd55361cb66e2d8bf653cb89ecb60bdcf91c6cb2dec1a3df89cce9fe3ff"
 
   def install
     bin.install "k9s"
