@@ -2,7 +2,7 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9ss.io"
-  version "0.1.0"
+  version "0.7.2"
 
   if os.Mac?
   url "https://github.com/derailed/k9s/releases/download/0.7.12/k9s_0.7.12_Darwin_x86_64.tar.gz"
