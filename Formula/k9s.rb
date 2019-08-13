@@ -2,14 +2,14 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9ss.io"
-  version "0.8.0"
+  version "0.8.1"
 
   if OS.mac?
-    url "https://github.com/derailed/k9s/releases/download/0.8.0/k9s_0.8.0_Darwin_x86_64.tar.gz"
-    sha256 "8c61fbdc39f8349c34c5744613a6426f93c3bb77aff62214ff8881a1f7300d8a"
+    url "https://github.com/derailed/k9s/releases/download/0.8.1/k9s_0.8.1_Darwin_x86_64.tar.gz"
+    sha256 "9d1c5adb5d536b0035bb3eefb4d04ba52cacb1b65eaa1f9d1406333a4174b5ef"
   elsif OS.linux?
-    url "https://github.com/derailed/k9s/releases/download/0.8.0/k9s_0.8.0_Linux_x86_64.tar.gz"
-    sha256 "ae878feda33d79c3c9f5766457b1111b11da9ec94989936bddb84258fef14605"
+    url "https://github.com/derailed/k9s/releases/download/0.8.1/k9s_0.8.1_Linux_x86_64.tar.gz"
+    sha256 "3ece8ad1c613d9a97401d6a4b0b4cf97a1f0f56f635cb15cdc7d65a7a4e2c732"
   end
 
   def install
