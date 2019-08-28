@@ -6,10 +6,10 @@ class K9s < Formula
 
   if OS.mac?
     url "https://github.com/derailed/k9s/releases/download/0.8.3/k9s_0.8.3_Darwin_x86_64.tar.gz"
-    sha256 "a1f9668ac285a2e6919b83d7b9cd53976972c18bb5adcdf293fdebd148b27acc"
+    sha256 "01ee4881a3864626c5675b594698257042d794d0341bc7ac314e61a567aa87ce"
   elsif OS.linux?
     url "https://github.com/derailed/k9s/releases/download/0.8.3/k9s_0.8.3_Linux_x86_64.tar.gz"
-    sha256 "a1b6a76ff056295d82b27a684dd2120be574ed856f3ce7491b88907def8515bc"
+    sha256 "516a4e547ed1888aede0e7f5367ee9c7de5b960a612f0d3fc21ae4f70ae5bf0c"
   end
 
   def install
