@@ -7,19 +7,19 @@ class K9s < Formula
 
   if OS.mac?
     url "https://github.com/derailed/k9s/releases/download/0.10.6/k9s_0.10.6_Darwin_x86_64.tar.gz"
-    sha256 "3bc48b41dfc892777140d4f28e1da12156ef9da78cd9f4ef5507a996e6d9f2e2"
+    sha256 "3c413eb6fc6b154ebe3567153c92ffbc50a9d589e28b4094abd396e08d74dea9"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/derailed/k9s/releases/download/0.10.6/k9s_0.10.6_Linux_x86_64.tar.gz"
-      sha256 "eafb70d623b22b0cc5b62e2507bffac938bd915b9d26482c053590bc62da478e"
+      sha256 "f9bc2b7faac2b583ec1c6c9de3914fc49e850e4d223fa2800810917c51872f80"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/derailed/k9s/releases/download/0.10.6/k9s_0.10.6_Linux_arm64.tar.gz"
-        sha256 "f67f235cdcbb568d0fb559b87eefac6f1195f5e98ede498044d0bd5629225484"
+        sha256 "78f05fc2c43553e73b594489e3be4808501ddf00b36139e04199cb19a2e7a93d"
       else
         url "https://github.com/derailed/k9s/releases/download/0.10.6/k9s_0.10.6_Linux_armv6.tar.gz"
-        sha256 "8188cb547862752e609fe642ce4cf33a48ebf1cf3df993cb29a290ef12876991"
+        sha256 "ac52c3563c6771003d50dd595eca837b76f41de33c5fd308d650cc82de27b218"
       end
     end
   end
