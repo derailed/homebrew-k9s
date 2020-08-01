@@ -2,21 +2,21 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.21.4"
+  version "0.21.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/derailed/k9s/releases/download/v0.21.4/k9s_Darwin_x86_64.tar.gz"
-    sha256 "d89640a605e6a84e8f4a52597c047ddd00586b5638f3eb4bab7964c4bfe5541f"
+    url "https://github.com/derailed/k9s/releases/download/v0.21.5/k9s_Darwin_x86_64.tar.gz"
+    sha256 "b130779f11013682a247fb763c19006b19d84278520d27d6ad143b3d505b1a49"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.21.4/k9s_Linux_x86_64.tar.gz"
-      sha256 "4aef9daebbc9c5e5af74545ed3491578b9118fa450cce25825c4d7a11a775eb5"
+      url "https://github.com/derailed/k9s/releases/download/v0.21.5/k9s_Linux_x86_64.tar.gz"
+      sha256 "c13ab1fdd41a2da53a463e2e23c90fa1bd2d8d7c1c572b3cbd3fd73f81f6b136"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/k9s/releases/download/v0.21.4/k9s_Linux_arm64.tar.gz"
-        sha256 "746218188d5b4e01afc8a3e3f29426e3571e90f526d4a6ba979cfb28e1378e56"
+        url "https://github.com/derailed/k9s/releases/download/v0.21.5/k9s_Linux_arm64.tar.gz"
+        sha256 "9be5d888a0ef11e6a1b19137c907ce9b7c93f980d4b3e714ed7e19e1bd9e1c36"
       else
       end
     end
