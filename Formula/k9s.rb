@@ -5,28 +5,44 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.24.15"
-  bottle :unneeded
+  version "0.25.0"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/derailed/k9s/releases/download/v0.24.15/k9s_Darwin_x86_64.tar.gz"
-    sha256 "ba33b0e0fd0679668b7af85fe95fbdc78cfc4ad4e10512146656ee382f1ce8ae"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/derailed/k9s/releases/download/v0.24.15/k9s_Darwin_arm64.tar.gz"
-    sha256 "db0523162993447b42cba3ce0986cd3ee15b198b761576b9c8402b9409d0fc1b"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/derailed/k9s/releases/download/v0.24.15/k9s_Linux_x86_64.tar.gz"
-    sha256 "0590c32c20cd22416f2a06fad9155257c156e32c60e8757bf96d5a28cb1720dd"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/derailed/k9s/releases/download/v0.24.15/k9s_Linux_arm64.tar.gz"
-    sha256 "c715d8cdcd80fa966e5aae99c33c8304dc0582bd0b3c19be30a496fb0ee2d807"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/derailed/k9s/releases/download/v0.25.0/k9s_Darwin_arm64.tar.gz"
+      sha256 "3d152ab8115fbe38876e58da6aa14ca97f250f23d411fb8913e77fab07f43f03"
+
+      def install
+        bin.install "k9s"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/k9s/releases/download/v0.25.0/k9s_Darwin_x86_64.tar.gz"
+      sha256 "284923d08740b2cac8a295bbaf5ccf29eaded6477f93a9bb0c1b49370503126b"
+
+      def install
+        bin.install "k9s"
+      end
+    end
   end
 
-  def install
-    bin.install "k9s"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/derailed/k9s/releases/download/v0.25.0/k9s_Linux_arm64.tar.gz"
+      sha256 "d12e1b4db07e6384fb3277d4c4add99db95e163a1bce8ce6909c3ac0721f5154"
+
+      def install
+        bin.install "k9s"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/k9s/releases/download/v0.25.0/k9s_Linux_x86_64.tar.gz"
+      sha256 "6714851acca9bc4f19c00a4b96cf3ea83b3889b517e03a5b4910b5a02e563c2e"
+
+      def install
+        bin.install "k9s"
+      end
+    end
   end
 
   test do
