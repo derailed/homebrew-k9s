@@ -5,42 +5,54 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.27.0"
+  version "0.27.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.27.0/k9s_Darwin_arm64.tar.gz"
-      sha256 "a8cec661e6d4f61d570802668b1bc5ec05a42c77396539153712324eb43dcbef"
+      url "https://github.com/derailed/k9s/releases/download/v0.27.1/k9s_Darwin_arm64.tar.gz"
+      sha256 "4ee3c3c4af47c63be1bd4c876add16051aad94f733c4f405ea813efdbdd4eebb"
 
       def install
-        bin.install "k9s"
+        system "make", "build"
+        bin.install "execs/k9s"
+
+        generate_completions_from_executable(bin/"k9s", "completion")
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.27.0/k9s_Darwin_amd64.tar.gz"
-      sha256 "11ed3c82e32a9cad14b1d8cbec3fa5916f6945dd19bd587a1598b9c25b4c9e87"
+      url "https://github.com/derailed/k9s/releases/download/v0.27.1/k9s_Darwin_amd64.tar.gz"
+      sha256 "dd21770bc26eaf08392c8ce892cd5be335b55778d8616ff8a8f863157138b81a"
 
       def install
-        bin.install "k9s"
+        system "make", "build"
+        bin.install "execs/k9s"
+
+        generate_completions_from_executable(bin/"k9s", "completion")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.27.0/k9s_Linux_arm64.tar.gz"
-      sha256 "2d962225c2896cecf2a7dbdf1cfa2c318a83661b7189687bdbd851dae0e5cc80"
+      url "https://github.com/derailed/k9s/releases/download/v0.27.1/k9s_Linux_arm64.tar.gz"
+      sha256 "4086e4fa92324e5462a34cbb44e18c54b714af91af454c3a5f1546028669006f"
 
       def install
-        bin.install "k9s"
+        system "make", "build"
+        bin.install "execs/k9s"
+
+        generate_completions_from_executable(bin/"k9s", "completion")
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.27.0/k9s_Linux_amd64.tar.gz"
-      sha256 "2d7811614bffd66660cc6b670da6f47ece234177097410d5fceab59ae245a3aa"
+      url "https://github.com/derailed/k9s/releases/download/v0.27.1/k9s_Linux_amd64.tar.gz"
+      sha256 "0b3fca451e8f642fb5682346b9e00e23b23fa372a98a287616baf2e1fb14d795"
 
       def install
-        bin.install "k9s"
+        system "make", "build"
+        bin.install "execs/k9s"
+
+        generate_completions_from_executable(bin/"k9s", "completion")
       end
     end
   end
