@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.29.0"
+  version "0.29.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.29.0/k9s_Darwin_arm64.tar.gz"
-      sha256 "67829d786926ce9e79208550f2f42a9b16792525924088bae04d496a9f9fcdaa"
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/k9s/releases/download/v0.29.1/k9s_Darwin_amd64.tar.gz"
+      sha256 "212138957e40415f0eb53c8c7733886448a69bc3439197fca8f281f84ca379e0"
 
       def install
         bin.install "k9s"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.29.0/k9s_Darwin_amd64.tar.gz"
-      sha256 "4df299f1fbaf020724d98f7d7788eba0234cb38cb104cf5fa0bb576718104dc8"
+    if Hardware::CPU.arm?
+      url "https://github.com/derailed/k9s/releases/download/v0.29.1/k9s_Darwin_arm64.tar.gz"
+      sha256 "e8e4eb5359c8393facc3907e7ac433bd3a43c0d4b30331acda114054fb10febe"
 
       def install
         bin.install "k9s"
@@ -28,16 +28,16 @@ class K9s < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.29.0/k9s_Linux_arm64.tar.gz"
-      sha256 "65f5a8e0d3b9741a4bc2a4e98abd9c3bb3fc64f5dbbe3e055f28a330242e864a"
+      url "https://github.com/derailed/k9s/releases/download/v0.29.1/k9s_Linux_arm64.tar.gz"
+      sha256 "f9dbd1ff1cd26d851c8ac695decbc4ceea97f2a87ccfa16ff805ab5f49ae9b81"
 
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.29.0/k9s_Linux_amd64.tar.gz"
-      sha256 "2840f58e025c75cb7762e80a167b2e0ce13113618058210ffb4cbe115102412c"
+      url "https://github.com/derailed/k9s/releases/download/v0.29.1/k9s_Linux_amd64.tar.gz"
+      sha256 "b7ed81a8952a5520a1a6978c3cf68b1fd555d928a444c63d4b826ae6fbb6d9ff"
 
       def install
         bin.install "k9s"
