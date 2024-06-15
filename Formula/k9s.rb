@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.32.4"
+  version "0.32.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Darwin_arm64.tar.gz"
-      sha256 "6827e05163d32c714350855ce8417217b2801276ffbea6f2e6e3d573bfc67bc5"
+    on_intel do
+      url "https://github.com/derailed/k9s/releases/download/v0.32.5/k9s_Darwin_amd64.tar.gz"
+      sha256 "4df59dd930bef4b0fbbc8558001dd3e7bcecbfa23f2b4b008d75285e73a5906a"
 
       def install
         bin.install "k9s"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Darwin_amd64.tar.gz"
-      sha256 "7bfa510aaf0a1b2dd7057f1aaab879986f07c49753b452bf949c830e7be06714"
+    on_arm do
+      url "https://github.com/derailed/k9s/releases/download/v0.32.5/k9s_Darwin_arm64.tar.gz"
+      sha256 "916a51cc8e0c48811a1b459cfad98201ba9e0b90e5741d8a889bed718169f17d"
 
       def install
         bin.install "k9s"
@@ -27,20 +27,24 @@ class K9s < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_arm64.tar.gz"
-      sha256 "adfbe3de1ffd3f119ff27d76d9a493e08adb2536f9b79d08fa245ddb75a5fe52"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/derailed/k9s/releases/download/v0.32.5/k9s_Linux_amd64.tar.gz"
+        sha256 "33c31bf5feba292b59b8dabe5547cb52ab565521ee5619b52eb4bd4bf226cea3"
 
-      def install
-        bin.install "k9s"
+        def install
+          bin.install "k9s"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_amd64.tar.gz"
-      sha256 "d62611d9be2c35b782a765e98421500196acbf8be844cd3d9e32d4fa7846da05"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/derailed/k9s/releases/download/v0.32.5/k9s_Linux_arm64.tar.gz"
+        sha256 "0b6315206843de295aa0adcb172af44182cd60ba8fc34792069c993d12624a29"
 
-      def install
-        bin.install "k9s"
+        def install
+          bin.install "k9s"
+        end
       end
     end
   end
