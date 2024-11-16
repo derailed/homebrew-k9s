@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.32.6"
+  version "0.32.7"
 
   on_macos do
     on_intel do
-      url "https://github.com/derailed/k9s/releases/download/v0.32.6/k9s_Darwin_amd64.tar.gz"
-      sha256 "d6547a2bcdfe1c8cd024ec3b9145108b37696efb0199ae6e20bc02135aa3b8ba"
+      url "https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_Darwin_amd64.tar.gz"
+      sha256 "64c0b81aa844aa3160e9c93d44eb17a5cdb0b7ff605eaff3467c94ebfd8c8f79"
 
       def install
         bin.install "k9s"
       end
     end
     on_arm do
-      url "https://github.com/derailed/k9s/releases/download/v0.32.6/k9s_Darwin_arm64.tar.gz"
-      sha256 "e09c5e71f0536ada93c5d6c50563d7be9ffa25d25aeb3a1e51f222b61d24878d"
+      url "https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_Darwin_arm64.tar.gz"
+      sha256 "39b885668f07a1156f55ad3cb6b4b06c0b4ed6ef363db8a8c966aeabb1e67ad3"
 
       def install
         bin.install "k9s"
@@ -29,8 +29,8 @@ class K9s < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/k9s/releases/download/v0.32.6/k9s_Linux_amd64.tar.gz"
-        sha256 "3f5fa5b3563cf2962ecd78381df59a72a01d824d87f3c70493f7748807243755"
+        url "https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_Linux_amd64.tar.gz"
+        sha256 "03934727bfbf39b1e61a74d8e045796cda2de14f8ce4c01df27f43d4494021de"
 
         def install
           bin.install "k9s"
@@ -39,8 +39,8 @@ class K9s < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/k9s/releases/download/v0.32.6/k9s_Linux_arm64.tar.gz"
-        sha256 "dfe0bb78e17a4b72ff151e18e548467b6073608e1af4e2efb30a884eed772ea0"
+        url "https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_Linux_arm64.tar.gz"
+        sha256 "b890a7a212a3fc69e6ea4b2a29d59f80ed501a27ad654c819a155cc7c3c6aa8d"
 
         def install
           bin.install "k9s"
