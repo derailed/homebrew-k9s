@@ -10,7 +10,7 @@ class K9s < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/derailed/k9s/releases/download/v0.40.2/k9s_Darwin_amd64.tar.gz"
-      sha256 "7d428c1a955b5beee15bb5f6ea3c4499c1068771058d23562039386f998aaf7e"
+      sha256 "a440a3f5dcf3c3de12d7c86d13e199ff1fca91d30e11cb4457d382cb9ca3aedc"
 
       def install
         bin.install "k9s"
@@ -18,7 +18,7 @@ class K9s < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/derailed/k9s/releases/download/v0.40.2/k9s_Darwin_arm64.tar.gz"
-      sha256 "eb10d865bff085106a0c4125100db560eaa56d8a0f2220ed8c1c9d159fe79726"
+      sha256 "ad15e8ab7052c63d7a114bc6589b67fefe442c7475c876de0b81a927d6fc1797"
 
       def install
         bin.install "k9s"
@@ -30,7 +30,7 @@ class K9s < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/derailed/k9s/releases/download/v0.40.2/k9s_Linux_amd64.tar.gz"
-        sha256 "3b03b898749978ff416f81ea9b2cf876add7fc3ceb41909687216c1a56ffa301"
+        sha256 "891c787fc7e9f841457bf9f14518e7856aeba4e2199f56b71be222779f5e7d65"
 
         def install
           bin.install "k9s"
@@ -40,7 +40,7 @@ class K9s < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/derailed/k9s/releases/download/v0.40.2/k9s_Linux_arm64.tar.gz"
-        sha256 "13e45114edfb1ed59080395b944262a5010e946d6d91c381f3b0b027975cf2d2"
+        sha256 "64c4da093c5d32f57f798a6d56e8ce481e875d1f49dbed168798b32cc9073982"
 
         def install
           bin.install "k9s"
