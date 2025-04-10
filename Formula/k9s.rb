@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.50.1"
+  version "0.50.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.1/k9s_Darwin_amd64.tar.gz"
-      sha256 "1feeeeb19f7025f1fae10bea24f1304205a8d41803aecf746e49499e16a12d3c"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.2/k9s_Darwin_amd64.tar.gz"
+      sha256 "913d61f500745ed5b08ea3d17228d6c3efcd002043719fd272f9a8f364e80c7b"
 
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.1/k9s_Darwin_arm64.tar.gz"
-      sha256 "13713ad51429f20ffea0a24d9dfb7b7e37b5f42097e359175868b09ac1a92db2"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.2/k9s_Darwin_arm64.tar.gz"
+      sha256 "c5c79522fca10bdc53b4cafe9354ec25ecacfeac19cba24815afd8b352cb7b02"
 
       def install
         bin.install "k9s"
@@ -29,8 +29,8 @@ class K9s < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/k9s/releases/download/v0.50.1/k9s_Linux_amd64.tar.gz"
-        sha256 "a4ae730d100b6732804971ed14ad374f3cfe30ca024627bfcf74e987d7d943c6"
+        url "https://github.com/derailed/k9s/releases/download/v0.50.2/k9s_Linux_amd64.tar.gz"
+        sha256 "7d3d420fb0085f6c069a032e71a67de8b152daea94abdaafcb16ade3e30f22e2"
 
         def install
           bin.install "k9s"
@@ -39,8 +39,8 @@ class K9s < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/k9s/releases/download/v0.50.1/k9s_Linux_arm64.tar.gz"
-        sha256 "c93a1138b600657eb72cc7bc8fccbb5f4c0ac346deffe24f870adc4b1de12f77"
+        url "https://github.com/derailed/k9s/releases/download/v0.50.2/k9s_Linux_arm64.tar.gz"
+        sha256 "768cfa067134545d94c177110dce45c0e5913af023a85178fe3eb39340b0f410"
 
         def install
           bin.install "k9s"
