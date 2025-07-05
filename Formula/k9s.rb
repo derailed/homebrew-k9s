@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.50.6"
+  version "0.50.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Darwin_amd64.tar.gz"
-      sha256 "119ed4852396a24f59c9bfde800584f2fcbc90a340abecc2537af4ed4d0ed4e6"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.7/k9s_Darwin_amd64.tar.gz"
+      sha256 "e6ba0d732f7da23fc420ba8819373c054eafb40afe2a897c9eff0c3d68b2049b"
 
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Darwin_arm64.tar.gz"
-      sha256 "09f4ff8c81b29f64691297d5f5d021246186f13f7bba021f1375e0996bc04bc7"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.7/k9s_Darwin_arm64.tar.gz"
+      sha256 "e5a9ba649c589db9afcc9bdcd746b38dcc2a094d42732686c8c1c971b8ce2770"
 
       def install
         bin.install "k9s"
@@ -28,15 +28,15 @@ class K9s < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz"
-      sha256 "5fc98f2dcf1d8fac6251f5a1ae1dc6fe7fe2b2d43b13bb3039e51ad492e2a70e"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.7/k9s_Linux_amd64.tar.gz"
+      sha256 "33c7699c6d71544c6704f78be928eca3445262cf462b2ac110a3284f67eb1c7b"
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_arm64.tar.gz"
-      sha256 "fc5b3e3ceb3418807ec1393572643e2d2262d08dfd71a8292a4c5b17a1e50875"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.7/k9s_Linux_arm64.tar.gz"
+      sha256 "39ca43367170228017a28543c738dbc3b614fdd5e2b13b24074371314b8ca67e"
       def install
         bin.install "k9s"
       end
