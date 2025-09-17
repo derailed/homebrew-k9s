@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.50.9"
+  version "0.50.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.9/k9s_Darwin_amd64.tar.gz"
-      sha256 "addbe8d67c1f65d76ce17592c7f0d0253ac0637073bd90dc7dc8533352a643a9"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Darwin_amd64.tar.gz"
+      sha256 "916a37719c552bbccf25fd67af65853eef5e7533add380e1e0bcbd588aa36dfd"
 
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.9/k9s_Darwin_arm64.tar.gz"
-      sha256 "30a91c1b91a52086f34a0a24c6b4ee8477fc360cd4d3c4d413a514ff2f308bd9"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Darwin_arm64.tar.gz"
+      sha256 "caec596090e6cac4f49be1e77314e5a240523238ca85482cd4e8a47c17c81ffc"
 
       def install
         bin.install "k9s"
@@ -28,15 +28,15 @@ class K9s < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.9/k9s_Linux_amd64.tar.gz"
-      sha256 "5e625efa26c3e14256cf29d242179b32129183b549937ec62d0ad9be1bfe2ca4"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Linux_amd64.tar.gz"
+      sha256 "eeb79d0f95e880a5b6c80c8bbcfb4a630fc95f5ab43e853390664caf96e81452"
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.9/k9s_Linux_arm64.tar.gz"
-      sha256 "147e696b608da9a300b9db6b35fd6dfc0713ce8c64865e550c90452696bb779a"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Linux_arm64.tar.gz"
+      sha256 "6aaf8024159c9ec9a4436a12698f65ea026b94e9c378dc436cfa4ad5693eda74"
       def install
         bin.install "k9s"
       end
