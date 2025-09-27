@@ -5,20 +5,20 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.50.12"
+  version "0.50.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.12/k9s_Darwin_amd64.tar.gz"
-      sha256 "54157ca4a28a93904a825ce4858da339063c275878f92ee07f6e3f1fbbb163ca"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.13/k9s_Darwin_amd64.tar.gz"
+      sha256 "46f37034dd5683deb3ee6be9106906d69454f61f4a7922fa6e893f414436de18"
 
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.12/k9s_Darwin_arm64.tar.gz"
-      sha256 "509f78bbceb1444fb397fae61586325ecfbc3bd6663e8490ba5c2599523771e5"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.13/k9s_Darwin_arm64.tar.gz"
+      sha256 "8ede5ecebfe23cfd9de1e0734c12f47640bc3c0a4ec838bda7acf688659beccf"
 
       def install
         bin.install "k9s"
@@ -28,15 +28,15 @@ class K9s < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.12/k9s_Linux_amd64.tar.gz"
-      sha256 "b45d5399ed6a222c37dcb44632319b9c96c7995263ada4ef75289fdd78a48df7"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.13/k9s_Linux_amd64.tar.gz"
+      sha256 "fceab00e9f7b47d5f3fcccccc2ffd5a15090fdb2345d45938828a1f6114e9a5e"
       def install
         bin.install "k9s"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/k9s/releases/download/v0.50.12/k9s_Linux_arm64.tar.gz"
-      sha256 "271d06fa71a5faba90db57abcf4ef608f2440769f445d64bc1a39d2b1fa5c2c0"
+      url "https://github.com/derailed/k9s/releases/download/v0.50.13/k9s_Linux_arm64.tar.gz"
+      sha256 "52610fd5bcb3d0e998965f6d600d5a7bf5ef5971ce66ccb43dff16a7d10f1985"
       def install
         bin.install "k9s"
       end
